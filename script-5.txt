@@ -1,0 +1,9 @@
+#terminate the Instance
+import boto3
+region ='region'
+instances =['instance id']
+ec2=boto3.client('ec2',region_name=region)
+
+def lambda_handler(event,context):
+    ec2.terminate_instances(InstanceIds=instances)
+    print('terminating your instances:'+str(instances))
