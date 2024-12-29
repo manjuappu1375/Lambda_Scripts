@@ -1,6 +1,6 @@
 #Start the Instance
 import boto3
-region ='region '
+region ='region'
 instances =['instance id']
 ec2=boto3.client('ec2',region_name=region)
 
